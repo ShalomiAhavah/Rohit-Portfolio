@@ -47,7 +47,7 @@ header {
     display: flex;
     flex-direction: row;
     font-size: 1.25vw;
-    margin:2vh 4vw;
+    margin:5vh 4vw;
 }
 
 header * {
