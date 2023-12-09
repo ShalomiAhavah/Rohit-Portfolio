@@ -8,6 +8,8 @@
     --gradient-orange: #FF6B00;
     --circle-gradient: hsl(25, 100, 50, 10%);
     --paragraph-color: #4E4E4E;
+    --divider-color: #C4C4C4;
+    --border-color: #F7F7F7;
 }
 
 
@@ -37,7 +39,7 @@ body {
 }
 
 section {
-    padding:2vh 4vw;  
+    padding:2vh 9vw  
 }
 
 /* Header/Menu */
@@ -47,7 +49,7 @@ header {
     display: flex;
     flex-direction: row;
     font-size: 1.25vw;
-    margin:5vh 4vw;
+    margin:5vh 9vw;
 }
 
 header * {
@@ -71,46 +73,54 @@ header * {
     overflow: hidden;
 }
 
+.menu--link:hover {
+    color: black;
+    text-decoration: underline;
+}
+
 /*---------------- Main -------------*/
 
 /* Section 1 */
-
+/* 
 #section1 {
-    padding:4vh 4vw 2vh 4vw;
-}
+    padding:4vh 5vw 2vh 10vw;
+} */
 
 #introduction {
     font-size: 1.5vw;
-    color: var(--text-color);
+    color: black;
+    opacity: 70%;
     margin: 0;
 }
 
 #introduction-heading {
     width: 50vw;
-    font-size: 4.5vw;
+    font-size: 5vw;
     font-weight: 600;
     line-height:6vw;
+    letter-spacing: -1px;
     margin: 2vh 0 0 0;
     overflow: hidden;
+    color: black;
 }
 
 .button-orange {
-    height: 2.2vw;
+    height: 3.4vw;
     width: 18vw;
     display: block;
+    background-color: var(--gradient-orange);
     margin: 3vh 0;
     padding:0 2vw;
     border-radius: 20px;
-    background-color: var(--gradient-orange);
-    font-size: 1.25vw;
+    font-size: 1.3vw;
     text-decoration: none;
     color: var(--background);
-    line-height: 2.2vw;
+    line-height: 3.4vw;
     overflow: hidden;
 }
-.button-orange > img{
-    height: 1.4vw;
-    margin: 0.4vw 0 0.4vw 1vw;
+.button-orange > img {
+    height: 1.8vw;
+    margin: 0.8vw;
     position: absolute;
     display: inline;
 }
@@ -131,8 +141,8 @@ header * {
 .vertical-divider {
     height: 16vh;
     width: 1px;
-    margin: 3vh auto;
-    background-color: rgb(193, 187, 187);
+    margin:7vh auto;
+    border: 1px solid var(--divider-color);
 }
 
 
@@ -141,20 +151,30 @@ header * {
 
 
 #featured-projects {
-    width: 100%;
+    width: 104%;
     display: grid;
     grid-template-columns: 50% 50%;
-    border-top: 1px solid rgba(211, 211, 211, 0.308);
+    border-top: 2px solid var(--border-color);
+    margin-top: 5vh;
 }
 
 #featured-heading {
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 2vw;
+    font-weight: 600;
+}
+.project:nth-child(1), 
+.project:nth-child(3){
+    border-right: 2px solid var(--border-color);
+}
 
+.project:first-child,
+.project:nth-child(2) {
+    border-bottom:2px solid var(--border-color);
 }
 
 .project {
-    margin: 5vh 0;
+    padding: 5vh 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,13 +200,13 @@ header * {
 }
 
 .featured-project-image {
-    width: 35vw;
+    width: 34vw;
     display: block;
 }
 
 #featured-projects p {
-    width: 35vw;
-    font-size: 1.25vw;
+    width: 34vw;
+    font-size: 1.15vw;
     color: var(--paragraph-color);
     margin: 0;
 }
@@ -195,12 +215,12 @@ header * {
 
 #view-all-button {
     height: 2.4vw;
-    width: 14vw;
+    width: 12vw;
     display: block;
     border: 1px solid var(--paragraph-color);
     color: var(--paragraph-color);
     text-decoration: none;
-    font-size: 1.25vw;
+    font-size: 1.2vw;
     border-radius: 15px;
     text-align: center;
     line-height: 2.4vw;
@@ -212,22 +232,28 @@ header * {
 
 #section3 {
     width: 100vw;
-    height: 45vh;
+    height: 60vh;
     background-image: linear-gradient(#FF6B00, #FDFDFD);
     text-align: center;
     padding: 7vh 0 0 0;
 }
 
+#section3 span {
+    display: block;
+    margin: 18vh 0 0 0;
+}
+
 #section3 >span>h3, #email{
     display: inline;
     position:static;
-    font-size: 5vw;
-    margin:6vw 5px;
-    font-weight: 600px;
+    font-size: 7vw;
+    margin:0 5px;
+    font-weight: 700;
     text-align: center;
     color: var(--background);
+    text-decoration-thickness:3px;
+    text-underline-offset: 5px;
 }
-
 
 
 
@@ -235,13 +261,21 @@ header * {
 /* -----------Footer------------- */
 footer {
     width: 100%;
-    padding:0 4vw;
+    height: 1.5vh;
+    padding:0 10vw;
     display: flex;
     justify-content: space-between;
 }
 
+#link-group {
+    height: 1.2vh;
+    padding: 0;
+    overflow: hidden;
+}
+
 footer > a, #link-group > a{
     color: var(--gradient-orange);
+    opacity: 70%;
     text-decoration: none;
     font-size: 0.85vw;
     margin: 0 1vw;
