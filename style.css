@@ -232,7 +232,7 @@ header * {
 
 #section3 {
     width: 100vw;
-    height: 60vh;
+    height: 95vh;
     background-image: linear-gradient(#FF6B00, #FDFDFD);
     text-align: center;
     padding: 7vh 0 0 0;
@@ -240,7 +240,7 @@ header * {
 
 #section3 span {
     display: block;
-    margin: 18vh 0 0 0;
+    margin: 28vh 0 0 0;
 }
 
 #section3 >span>h3, #email{
@@ -251,8 +251,8 @@ header * {
     font-weight: 700;
     text-align: center;
     color: var(--background);
-    text-decoration-thickness:3px;
-    text-underline-offset: 5px;
+    text-decoration-thickness:3.5px;
+    text-underline-offset: 8px;
 }
 
 
@@ -273,11 +273,47 @@ footer {
     padding: 0;
 }
 
-footer > a, #link-group > a{
+footer  a{
     color: var(--gradient-orange);
     opacity: 70%;
-    text-decoration: none;
+    text-decoration: none; 
     font-size: 0.85vw;
     margin: 0 1vw;
     font-weight: 500;
+}
+
+
+.link {   
+    position: relative;
+    white-space: nowrap;
+}
+
+.link:hover {
+    color: #e85100;
+}
+
+.link::before,
+.link::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 85%;
+    left: 0;
+    pointer-events: none;
+}
+
+.link::before {
+    content: '';
+}
+
+.link::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+ .link:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
 }
